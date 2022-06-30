@@ -21,7 +21,7 @@ func difference(a []string, b []string) (diff []string) {
 	return
 }
 
-// Migrate table
+// 迁移数据库
 func (engine *Engine) Migrate(value interface{}) error {
 	_, err := engine.Transaction(func(s *session.Session) (result interface{}, err error) {
 		if !s.Model(value).HasTable() {
